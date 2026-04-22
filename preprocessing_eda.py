@@ -320,25 +320,20 @@ plt.savefig('fig7_severity_distributions.png', dpi=150, bbox_inches='tight')
 plt.close()
 print("Saved: fig7_severity_distributions.png")
 
-# ---- Plot 8: Top 10 LGAs by Crash Frequency ---
-# Count crashes per LGA
+# ─── Plot 8: Top Locations ─────────────
 top_lga = df['LGA'].value_counts().head(10)
-# Plot
-plt.figure(figsize=(10, 6))
-top_lga.sort_values().plot(
-    kind='barh',
-    color='#4C72B0'
-)
-# Labels & title
+
+plt.figure(figsize=(8, 5))
+top_lga.plot(kind='barh', color='#378ADD')
 plt.title('Top 10 LGAs by Crash Frequency')
 plt.xlabel('Number of Crashes')
 plt.ylabel('LGA')
-# Save figure
+plt.gca().invert_yaxis()
 plt.tight_layout()
-plt.savefig('fig8_top_lga.png', dpi=150)
+plt.savefig('fig6_top_lga.png', dpi=150)
 plt.close()
 
-print("Saved: fig8_top_lga.png")
+print("Saved: fig6_top_lga.png")
 
 # ─────────────────────────────────────────────
 # 3. STATISTICAL SUMMARY FOR PRESENTATION
