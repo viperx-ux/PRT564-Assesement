@@ -320,7 +320,7 @@ plt.savefig('fig7_severity_distributions.png', dpi=150, bbox_inches='tight')
 plt.close()
 print("Saved: fig7_severity_distributions.png")
 
-# ─── Plot 8: Top Locations ─────────────
+# ─── Plot 13: Top Locations ─────────────
 top_lga = df['LGA'].value_counts().head(10)
 
 plt.figure(figsize=(8, 5))
@@ -330,10 +330,10 @@ plt.xlabel('Number of Crashes')
 plt.ylabel('LGA')
 plt.gca().invert_yaxis()
 plt.tight_layout()
-plt.savefig('fig6_top_lga.png', dpi=150)
+plt.savefig('fig13_top_lga.png', dpi=150)
 plt.close()
 
-print("Saved: fig6_top_lga.png")
+print("Saved: fig13_top_lga.png")
 
 # ─────────────────────────────────────────────
 # 3. STATISTICAL SUMMARY FOR PRESENTATION
